@@ -1,0 +1,22 @@
+{
+  "name": "react-app-rewire-graphql-tag",
+  "version": "1.0.0",
+  "description": "rewire your react-app and use graphql-tag",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+      "graphql-tag": "^2.4.2",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tkvw/react-app-rewire-graphql-tag.git"
+  },
+  "author": "Dennie de Lange",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tkvw/react-app-rewire-graphql-tag/issues"
+  },
+  "homepage": "https://github.com/tkvw/react-app-rewire-graphql-tag#readme"
+}
