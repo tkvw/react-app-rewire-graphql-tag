@@ -1,6 +1,6 @@
 {
   "name": "react-app-rewire-graphql-tag",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "rewire your react-app and use graphql-tag",
   "main": "index.js",
   "scripts": {

@@ -2,8 +2,13 @@
 function rewireGraphQLTag(config, env) {
     const gqlExtension = /\.(graphql|gql)$/
 
-    const fileLoader = config.module.rules.find(rule=> rule.loader && rule.loader.indexOf("file-loader")!==-1);
-    fileLoader.exclude.push(gqlExtension);
+    const flatten = (array) => array.reduce((a, b) =>
+        a.concat(Array.isArray(b) ? flatten(b) : b), []);
+
+    const fileLoader = flatten(config.module.rules.map((rule) => rule.oneOf || rule))
+        .find((rule) => rule.loader && rule.loader.indexOf("file-loader")!==-1);
+
+    fileLoader && fileLoader.exclude.push(gqlExtension);
 
     const gqlTagRule = {
         test: gqlExtension,
